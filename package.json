@@ -2,11 +2,8 @@
       "name": "joi-password",
       "version": "4.1.1",
       "description": "A Joi extension that help to validate a complex password",
-      "main": "lib/index.js",
-      "types": "lib/index.d.ts",
-      "files": [
-            "lib/**/*"
-      ],
+      "main": "index.js",
+      "types": "index.d.ts",
       "keywords": [
             "joi",
             "password",
@@ -16,7 +13,7 @@
       "scripts": {
             "build": "rm -r lib  && tsc",
             "publish": "yarn run build && yarn run build:cdn && npm publish",
-            "start:dev": "NODE_ENV=development  nodemon --exec ts-node index.ts",
+            "start:dev": "NODE_ENV=development nodemon --exec ts-node index.ts",
             "test": "jest",
             "test:cov": "jest --coverage --runInBand --detectOpenHandles",
             "build:cdn": "webpack --config webpack.config.js",
